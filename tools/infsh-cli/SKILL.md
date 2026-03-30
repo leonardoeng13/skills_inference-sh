@@ -1,7 +1,7 @@
 ---
 name: infsh-cli
 description: "Run 150+ AI apps via inference.sh CLI - image generation, video creation, LLMs, search, 3D, Twitter automation. Models: FLUX, Veo, Gemini, Grok, Claude, Seedance, OmniHuman, Tavily, Exa, OpenRouter, and many more. Use when running AI apps, generating images/videos, calling LLMs, web search, or automating Twitter. Triggers: inference.sh, infsh, ai model, run ai, serverless ai, ai api, flux, veo, claude api, image generation, video generation, openrouter, tavily, exa search, twitter api, grok"
-allowed-tools: Bash(infsh *)
+allowed-tools: Bash(infsh *), PowerShell(infsh *)
 ---
 
 # [inference.sh](https://inference.sh)
@@ -12,21 +12,34 @@ Run 150+ AI apps in the cloud with a simple CLI. No GPU required.
 
 ## Install CLI
 
+**macOS / Linux:**
 ```bash
 curl -fsSL https://cli.inference.sh | sh
 infsh login
 ```
 
+**Windows (PowerShell):**
+```powershell
+irm https://cli.inference.sh | iex
+infsh login
+```
+
 > **What does the installer do?** The [install script](https://cli.inference.sh) detects your OS and architecture, downloads the correct binary from `dist.inference.sh`, verifies its SHA-256 checksum, and places it in your PATH. That's it — no elevated permissions, no background processes, no telemetry. If you have [cosign](https://docs.sigstore.dev/cosign/system_config/installation/) installed, the installer also verifies the Sigstore signature automatically.
 >
-> **Manual install** (if you prefer not to pipe to sh):
+> **Manual install on Windows** (if you prefer not to run the install script):
+> ```powershell
+> $manifest = Invoke-RestMethod -Uri https://dist.inference.sh/cli/manifest.json
+> $entry = $manifest.files | Where-Object { $_.url -match 'windows-amd64' } | Select-Object -First 1
+> Invoke-WebRequest -Uri $entry.url -OutFile "$env:TEMP\inferencesh-cli.zip"
+> Expand-Archive -Path "$env:TEMP\inferencesh-cli.zip" -DestinationPath "$env:USERPROFILE\.local\bin" -Force
+> [System.Environment]::SetEnvironmentVariable("PATH", "$env:PATH;$env:USERPROFILE\.local\bin", "User")
+> ```
+>
+> **Manual install on macOS / Linux** (if you prefer not to pipe to sh):
 > ```bash
-> # Download the binary and checksums
 > curl -LO https://dist.inference.sh/cli/checksums.txt
 > curl -LO $(curl -fsSL https://dist.inference.sh/cli/manifest.json | grep -o '"url":"[^"]*"' | grep $(uname -s | tr A-Z a-z)-$(uname -m | sed 's/x86_64/amd64/;s/aarch64/arm64/') | head -1 | cut -d'"' -f4)
-> # Verify checksum
 > sha256sum -c checksums.txt --ignore-missing
-> # Extract and install
 > tar -xzf inferencesh-cli-*.tar.gz
 > mv inferencesh-cli-* ~/.local/bin/inferencesh
 > ```

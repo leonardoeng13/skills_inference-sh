@@ -1,7 +1,7 @@
 ---
 name: p-video
 description: "Generate videos with Pruna P-Video and WAN models via inference.sh CLI. Models: P-Video, WAN-T2V, WAN-I2V. Capabilities: text-to-video, image-to-video, audio support, 720p/1080p, fast inference. Pruna optimizes models for speed without quality loss. Triggers: pruna video, p-video, pruna ai video, fast video generation, optimized video, wan t2v, wan i2v, economic video generation, cheap video generation, pruna text to video, pruna image to video"
-allowed-tools: Bash(infsh *)
+allowed-tools: Bash(infsh *), PowerShell(infsh *)
 ---
 
 # Pruna P-Video Generation

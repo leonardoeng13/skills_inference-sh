@@ -1,7 +1,7 @@
 ---
 name: nano-banana
 description: "Generate images with Google Gemini native image models via inference.sh CLI. Models: Gemini 3 Pro Image, Gemini 2.5 Flash Image. Capabilities: text-to-image, image editing, multi-image input. Triggers: nano banana, gemini image, gemini 3 pro image, gemini 2.5 flash image, google image generation, native image generation, gemini native image"
-allowed-tools: Bash(infsh *)
+allowed-tools: Bash(infsh *), PowerShell(infsh *)
 ---
 
 # Nano Banana - Gemini Native Image Generation

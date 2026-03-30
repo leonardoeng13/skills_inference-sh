@@ -1,7 +1,7 @@
 ---
 name: ai-voice-cloning
 description: "AI voice generation, text-to-speech, and voice synthesis via inference.sh CLI. Models: ElevenLabs (22+ premium voices, 32 languages), Kokoro TTS, DIA, Chatterbox, Higgs, VibeVoice for natural speech. Capabilities: multiple voices, emotions, accents, long-form narration, conversation, voice transformation. Use for: voiceovers, audiobooks, podcasts, video narration, accessibility. Triggers: voice cloning, tts, text to speech, ai voice, voice generation, voice synthesis, voice over, narration, speech synthesis, ai narrator, elevenlabs, eleven labs, natural voice, realistic speech, voice ai, voice changer"
-allowed-tools: Bash(infsh *)
+allowed-tools: Bash(infsh *), PowerShell(infsh *)
 ---
 
 # AI Voice Generation

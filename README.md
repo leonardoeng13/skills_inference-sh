@@ -33,6 +33,8 @@ Or add from GitHub:
 
 After install, skills are available as `/inference-sh:flux-image`, `/inference-sh:google-veo`, etc.
 
+> **Windows users:** The `/plugin install` and `/plugin marketplace add` commands run inside Claude Code and work the same on all platforms. You do **not** need a bash shell to run them — just type them in Claude Code.
+
 ---
 
 ## Install as Skills
@@ -42,6 +44,8 @@ After install, skills are available as `/inference-sh:flux-image`, `/inference-s
 ```bash
 npx skills add inference-sh/skills
 ```
+
+> **Windows:** `npx` works on Windows if [Node.js](https://nodejs.org) is installed. Run the command in PowerShell, CMD, or any terminal.
 
 ### Specific Skills
 
@@ -54,8 +58,14 @@ npx skills add inference-sh/skills@web-search
 
 ### Manual
 
+**macOS / Linux:**
 ```bash
 cp -r tools/* ui/* sdk/* guides/* ~/.claude/skills/
+```
+
+**Windows (PowerShell):**
+```powershell
+Copy-Item -Recurse tools\*, ui\*, sdk\*, guides\* "$env:USERPROFILE\.claude\skills\"
 ```
 
 ---
@@ -63,6 +73,16 @@ cp -r tools/* ui/* sdk/* guides/* ~/.claude/skills/
 ## CLI Setup
 
 > Requires inference.sh CLI (`infsh`). [Install instructions](https://raw.githubusercontent.com/inference-sh/skills/refs/heads/main/cli-install.md)
+
+**macOS / Linux:**
+```bash
+curl -fsSL https://cli.inference.sh | sh
+```
+
+**Windows (PowerShell):**
+```powershell
+irm https://cli.inference.sh | iex
+```
 
 ```bash
 infsh login

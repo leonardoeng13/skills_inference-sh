@@ -2,8 +2,14 @@
 
 ## Installation
 
+**macOS / Linux:**
 ```bash
 curl -fsSL https://cli.inference.sh | sh
+```
+
+**Windows (PowerShell):**
+```powershell
+irm https://cli.inference.sh | iex
 ```
 
 ## Global Commands
@@ -71,8 +77,24 @@ curl -fsSL https://cli.inference.sh | sh
 |----------|-------------|
 | `INFSH_API_KEY` | API key (overrides config) |
 
+**Set on macOS / Linux:**
+```bash
+export INFSH_API_KEY=your-api-key
+```
+
+**Set on Windows (PowerShell - current session):**
+```powershell
+$env:INFSH_API_KEY = "your-api-key"
+```
+
+**Set on Windows (PowerShell - persistent):**
+```powershell
+[System.Environment]::SetEnvironmentVariable("INFSH_API_KEY", "your-api-key", "User")
+```
+
 ## Shell Completions
 
+**Bash / Zsh / Fish (macOS / Linux):**
 ```bash
 # Bash
 infsh completion bash > /etc/bash_completion.d/infsh
@@ -82,6 +104,11 @@ infsh completion zsh > "${fpath[1]}/_infsh"
 
 # Fish
 infsh completion fish > ~/.config/fish/completions/infsh.fish
+```
+
+**PowerShell (Windows):**
+```powershell
+infsh completion powershell >> $PROFILE
 ```
 
 ## App Name Format

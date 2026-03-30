@@ -2,8 +2,14 @@
 
 ## Install the CLI
 
+**macOS / Linux:**
 ```bash
 curl -fsSL https://cli.inference.sh | sh
+```
+
+**Windows (PowerShell):**
+```powershell
+irm https://cli.inference.sh | iex
 ```
 
 ## Login
@@ -26,8 +32,19 @@ Shows your user info if authenticated.
 
 For CI/CD or scripts, set your API key:
 
+**macOS / Linux:**
 ```bash
 export INFSH_API_KEY=your-api-key
+```
+
+**Windows (PowerShell - current session):**
+```powershell
+$env:INFSH_API_KEY = "your-api-key"
+```
+
+**Windows (PowerShell - persistent):**
+```powershell
+[System.Environment]::SetEnvironmentVariable("INFSH_API_KEY", "your-api-key", "User")
 ```
 
 The environment variable overrides the config file.
@@ -40,8 +57,14 @@ infsh update
 
 Or reinstall:
 
+**macOS / Linux:**
 ```bash
 curl -fsSL https://cli.inference.sh | sh
+```
+
+**Windows (PowerShell):**
+```powershell
+irm https://cli.inference.sh | iex
 ```
 
 ## Troubleshooting
@@ -51,6 +74,7 @@ curl -fsSL https://cli.inference.sh | sh
 | "not authenticated" | Run `infsh login` |
 | "command not found" | Reinstall CLI or add to PATH |
 | "API key invalid" | Check `INFSH_API_KEY` or re-login |
+| Command not found on Windows | Use PowerShell and run `irm https://cli.inference.sh \| iex` |
 
 ## Documentation
 
