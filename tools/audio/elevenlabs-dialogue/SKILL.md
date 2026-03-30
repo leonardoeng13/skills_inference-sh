@@ -1,7 +1,7 @@
 ---
 name: elevenlabs-dialogue
 description: "ElevenLabs multi-speaker dialogue generation - create conversations with different voices in a single audio file via inference.sh CLI. Capabilities: multi-voice dialogue, script-based generation, voice direction, conversation audio. Use for: podcasts, audiobooks, explainers, tutorials, character dialogue, video scripts. Triggers: elevenlabs dialogue, eleven labs dialogue, multi speaker, conversation audio, dialogue generation, text to dialogue, multi voice, voice acting, podcast dialogue, character voices, script to audio, elevenlabs conversation, two speakers"
-allowed-tools: Bash(infsh *)
+allowed-tools: Bash(infsh *), PowerShell(infsh *)
 ---
 
 # ElevenLabs Dialogue

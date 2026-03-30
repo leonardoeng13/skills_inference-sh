@@ -20,7 +20,7 @@ name: my-skill
 description: |
   What this skill does and when to use it.
   Include relevant keywords so agents know when to activate.
-allowed-tools: Bash(infsh *)
+allowed-tools: Bash(infsh *), PowerShell(infsh *)
 ---
 
 # My Skill

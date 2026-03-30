@@ -1,7 +1,7 @@
 ---
 name: elevenlabs-sound-effects
 description: "Generate AI sound effects from text descriptions with ElevenLabs via inference.sh CLI. Capabilities: text-to-sound-effect, custom duration, royalty-free audio. Use for: video production, game audio, podcasts, films, presentations, social media. Triggers: sound effects, sfx, sound generation, ai sound effects, generate sound, foley, audio effects, sound design, text to sound, elevenlabs sound, eleven labs sfx, ambient sound, cinematic sound, game sound effects"
-allowed-tools: Bash(infsh *)
+allowed-tools: Bash(infsh *), PowerShell(infsh *)
 ---
 
 # ElevenLabs Sound Effects
