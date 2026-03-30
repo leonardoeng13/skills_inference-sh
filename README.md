@@ -81,7 +81,7 @@ curl -fsSL https://cli.inference.sh | sh
 
 **Windows (PowerShell):**
 ```powershell
-irm https://cli.inference.sh | iex
+irm https://raw.githubusercontent.com/inference-sh/skills/main/install.ps1 | iex
 ```
 
 ```bash
