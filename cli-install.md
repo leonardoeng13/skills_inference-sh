@@ -12,10 +12,12 @@ infsh login
 Open **PowerShell** and run:
 
 ```powershell
-irm https://cli.inference.sh | iex
+irm https://raw.githubusercontent.com/inference-sh/skills/main/install.ps1 | iex
 infsh login
 ```
 
+> **Note:** `https://cli.inference.sh` serves a bash script which cannot be executed directly by PowerShell. Use the PowerShell-native installer above instead.
+>
 > **No PowerShell?** You can also use [Git Bash](https://git-scm.com/downloads) or [WSL](https://learn.microsoft.com/en-us/windows/wsl/install) and run the macOS/Linux command above.
 
 ## What does the installer do?
